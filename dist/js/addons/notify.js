@@ -120,6 +120,8 @@
                         containers[$this.options.pos].hide();
                     }
 
+                    $this.options.onClose.apply($this, []);
+
                     delete messages[$this.uuid];
                 };
 
@@ -166,7 +168,8 @@
         status: "",
         timeout: 5000,
         group: null,
-        pos: 'top-center'
+        pos: 'top-center',
+        onClose: function() {}
     };
 
     UI.notify          = notify;

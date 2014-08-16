@@ -80,7 +80,7 @@
     });
 
     // init code
-    $(document).on("focus.search.uikit", "[data-uk-search]", function(e) {
+    UI.$doc.on("focus.search.uikit", "[data-uk-search]", function(e) {
         var ele = $(this);
 
         if (!ele.data("search")) {
